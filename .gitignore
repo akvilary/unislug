@@ -1,0 +1,7 @@
+nimcache/
+nimblecache/
+tests/test_unislugify
+*.exe
+*.dll
+*.so
+*.dylib
