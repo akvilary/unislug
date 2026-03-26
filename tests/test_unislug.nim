@@ -46,6 +46,18 @@ suite "slugify":
   test "Czech":
     check slugify("Příliš žluťoučký") == "prilis-zlutoucky"
 
+  test "Slovak":
+    check slugify("Ďáblova Ťava") == "dablova-tava"
+
+  test "Hungarian":
+    check slugify("Győző és Űrhajó") == "gyozo-es-urhajo"
+
+  test "Turkish":
+    check slugify("İstanbul Güneşli") == "istanbul-guenesli"
+
+  test "Romanian":
+    check slugify("București Țară") == "bucuresti-tara"
+
   test "mixed scripts":
     check slugify("Hello Мир world") == "hello-mir-world"
 

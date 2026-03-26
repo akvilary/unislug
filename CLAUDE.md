@@ -27,7 +27,6 @@ tests/
 ## Build & test
 
 ```bash
-nim c -r tests/test_unislug.nim
 nimble test
 ```
 

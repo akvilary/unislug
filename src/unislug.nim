@@ -11,21 +11,11 @@ import unislug/transliterate
 type
   SlugifyOptions* = object
     ## Options for slug generation.
-    separator*: string          ## Separator character (default: "-")
-    lowercase*: bool            ## Convert to lowercase (default: true)
-    maxLength*: int             ## Maximum slug length; 0 = no limit (default: 0)
-    transliterate*: bool        ## Enable transliteration (default: true)
-    customReplacements*: seq[tuple[src, dst: string]] ## Custom string replacements applied before processing
-
-proc defaultSlugifyOptions*(): SlugifyOptions =
-  ## Returns default options for slugify.
-  SlugifyOptions(
-    separator: "-",
-    lowercase: true,
-    maxLength: 0,
-    transliterate: true,
-    customReplacements: @[],
-  )
+    separator*: string = "-"    ## Separator character (default: "-")
+    lowercase*: bool = true     ## Convert to lowercase (default: true)
+    maxLength*: int = 0         ## Maximum slug length; 0 = no limit (default: 0)
+    transliterate*: bool = true ## Enable transliteration (default: true)
+    customReplacements*: seq[tuple[src, dst: string]] = @[] ## Custom string replacements applied before processing
 
 proc isAsciiAlphanumeric(r: Rune): bool =
   let c = int(r)
