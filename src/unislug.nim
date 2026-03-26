@@ -1,12 +1,12 @@
 ## URL-safe slug generation from Unicode strings with transliteration support.
 ##
 ## .. code-block:: nim
-##   import unislugify
+##   import unislug
 ##   echo slugify("Привет, мир!")  # "privet-mir"
 ##   echo slugify("Ärger mit Übung", separator = "_")  # "aerger_mit_uebung"
 
 import std/[unicode, tables, strutils]
-import unislugify/transliterate
+import unislug/transliterate
 
 type
   SlugifyOptions* = object

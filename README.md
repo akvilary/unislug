@@ -1,4 +1,4 @@
-# unislugify
+# unislug
 
 Nim library for generating URL-safe slugs from Unicode strings with transliteration support.
 
@@ -7,13 +7,13 @@ Analogue of [python-slugify](https://github.com/un33k/python-slugify), [gosimple
 ## Installation
 
 ```bash
-nimble install unislugify
+nimble install unislug
 ```
 
 ## Quick start
 
 ```nim
-import unislugify
+import unislug
 
 echo slugify("Hello, World!")        # "hello-world"
 echo slugify("Привет, мир!")         # "privet-mir"
@@ -50,7 +50,7 @@ echo slugify("C++", customReplacements = @[("++", "pp")])
 For full control, pass a `SlugifyOptions` object:
 
 ```nim
-import unislugify
+import unislug
 
 let opts = SlugifyOptions(
   separator: "_",

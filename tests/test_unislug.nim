@@ -1,5 +1,5 @@
 import unittest
-import unislugify
+import unislug
 
 suite "slugify":
 

@@ -1,4 +1,4 @@
-# unislugify
+# unislug
 
 Nim library for generating URL-safe slugs from Unicode strings with transliteration support. Analogue of python-slugify, gosimple/slug (Go), cocur/slugify (PHP).
 
@@ -13,21 +13,21 @@ Nim library for generating URL-safe slugs from Unicode strings with transliterat
 
 ```
 src/
-├── unislugify.nim              # public API: slugify() proc, SlugifyOptions type
-└── unislugify/
+├── unislug.nim              # public API: slugify() proc, SlugifyOptions type
+└── unislug/
     └── transliterate.nim       # transliteration tables (Rune → string mappings)
 tests/
-    └── test_unislugify.nim     # unit tests
+    └── test_unislug.nim     # unit tests
 ```
 
 - Dependencies: only Nim stdlib (unicode, tables)
-- `unislugify.nim` — main module, exports `slugify()` proc and `SlugifyOptions`
-- `unislugify/transliterate.nim` — `Table[Rune, string]` with mappings for Cyrillic, Latin diacritics, special characters
+- `unislug.nim` — main module, exports `slugify()` proc and `SlugifyOptions`
+- `unislug/transliterate.nim` — `Table[Rune, string]` with mappings for Cyrillic, Latin diacritics, special characters
 
 ## Build & test
 
 ```bash
-nim c -r tests/test_unislugify.nim
+nim c -r tests/test_unislug.nim
 nimble test
 ```
 

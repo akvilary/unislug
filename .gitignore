@@ -1,6 +1,6 @@
 nimcache/
 nimblecache/
-tests/test_unislugify
+tests/test_unislug
 *.exe
 *.dll
 *.so
